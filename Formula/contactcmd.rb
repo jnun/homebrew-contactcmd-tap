@@ -1,16 +1,16 @@
 class Contactcmd < Formula
   desc "Personal CRM for the command line"
   homepage "https://contactcmd.com"
-  version "0.2.0"
+  version "0.2.1"
   license :cannot_represent
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/jnun/homebrew-contactcmd-tap/releases/download/v#{version}/contactcmd-#{version}-darwin-arm64.tar.gz"
-      sha256 "PLACEHOLDER_ARM64_SHA256"
+      sha256 "d9416369136a24214ea927bd66b915a1a1975aca28dd034fb57455b468a838e5"
     elsif Hardware::CPU.intel?
       url "https://github.com/jnun/homebrew-contactcmd-tap/releases/download/v#{version}/contactcmd-#{version}-darwin-amd64.tar.gz"
-      sha256 "PLACEHOLDER_AMD64_SHA256"
+      sha256 "4f017c9e9f3333178006a396241c58b8c96866140a736f74c4820c50007a396e"
     end
   end
 
@@ -26,6 +26,7 @@ class Contactcmd < Formula
 
       Grant permissions in:
         System Settings > Privacy & Security > Contacts
+        System Settings > Privacy & Security > Full Disk Access (for iMessage history)
 
       Quick start:
         contactcmd sync mac     # Import your contacts
